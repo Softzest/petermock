@@ -1,45 +1,29 @@
+
 /functions to activate the button upon click & focus on text input/ 
 var mzNum1 = document.getElementById('mzNumKey11');
 var mzNum2 = document.getElementById('mzNumKey21');
 var mzNum3 = document.getElementById('mzNumKey31');
-var mzNumPay = document.getElementById('mzNumPay');
 
-$(".mzShowPad1").hide();
-$(".mzShowPad2").hide();
-$(".mzShowPad3").hide();
-$(".mz-vl-btn").hide();
 
 // function to toggle between the two number input based on their focus
-$("#mzNumKey12").click(function() {
+$("#mzNumKey12").focus(function() {
 	mzNum1 = document.getElementById('mzNumKey12');
-	$(".mzShowPad1").toggle();
-});
+})
 
-$("#mzNumKey11").click(function() {
+$("#mzNumKey11").focus(function() {
 	mzNum1 = document.getElementById('mzNumKey11');
-	$(".mzShowPad1").toggle();
-});
-
-$("#mzNumKey21").click(function() {
-	mzNum1 = document.getElementById('mzNumKey21');
-	$(".mzShowPad2").toggle();
-});
+})
 
 // function to toggle between the two number input based on their focus
 
-$("#mzNumKey32").click(function() {
+$("#mzNumKey32").focus(function() {
 	mzNum3 = document.getElementById('mzNumKey32');
-	$(".mzShowPad3").toggle();
-});
+})
 
-$("#mzNumKey31").click(function() {
+$("#mzNumKey31").focus(function() {
 	mzNum3 = document.getElementById('mzNumKey31');
-	$(".mzShowPad3").toggle();
-});
+}) 
 
-$("#mzNumPay").click(function() {
-	$(".mz-vl-btn").toggle();
-});
 
 function getNum1(data) {
 	if ( mzNum1.value.length < 4 ) {
@@ -77,18 +61,6 @@ function getNum3(data) {
 	} 
 }
 
-function getPay(data) {
-	if ( mzNumPay.value.length < 4 ) {
-
-		mzNumPay.value = mzNumPay.value + data;
-
-	} else if ( mzNumPay.value.length >= 4 ) {
-
-		mzNumPay.value = mzNumPay.value ;
-
-	} 
-}
-
 function backspace(num) {
 
 	if (num === 1) {
@@ -105,11 +77,6 @@ function backspace(num) {
 
 		var fetch = mzNum3.value;
 		mzNum3.value = fetch.substring(0, fetch.length - 1);
-
-	} else if (num === 4) {
-
-		var fetch = mzNumPay.value;
-		mzNumPay.value = fetch.substring(0, fetch.length - 1);
 
 	} else {
 
@@ -133,10 +100,6 @@ function reset(num) {
 
 		mzNum3.value = "";
 
-	} else if (num === 4) {
-
-		mzNumPay.value = "";
-
 	} else {
 		alert("Number pad can not function properly, please reload your browser");
 	}
@@ -146,7 +109,7 @@ function reset(num) {
 
 //to slide partial down and up
 
-$("#mz-pc-sec").hide(); 
+$("#mz-pc-sec").hide(); //mz.sub-sec
 $("#mz-mp-sec").hide();
 $("#mz-sq-sec").hide();
 $("#mz-ae-sec").hide();
@@ -187,26 +150,10 @@ function mzPcCtrl(data){
 	}
 }
 
-
+// Get date picker
+// function getDate() {
 	$('.mz-pickDate').click(function() {
 		$(".mz-pickDate").datepicker();	
 	})
 	
-
-// to toogle disabled input field
-
-function mzAbleInp(inputId) {
-	if (inputId === "#mz-dp-email") {
-		var mzInp = "#mz-dp-NewMail";
-	}else if (inputId === "#mz-dp-card") {
-		var mzInp = ".mz-dp-cd";
-	}
-	
-
-	if ($(inputId).is(':checked')) {
-		$(mzInp).prop('disabled', false);
-	}else  {
-		$(mzInp).prop('disabled', true);
-	}
-	
-}
+// }

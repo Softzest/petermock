@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="css/style1.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<meta name="charset" content="UTF-8">
+		<meta name="keyword" content="softzest">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<div class="mz-partial-mini">
+
+			<div>
+				<ul>
+					<li class="col-100 mz-mini-sec" id="mz-pc-sec">
+													
+						<div class="mz-pc-partial">
+
+							<span onclick="mzClose('#mz-pc-partial')" class="mz-close">
+								<p>x</p>
+							</span>
+
+							<form>
+								<h2>change password</h2>
+
+								<span class="clearfix mz-input-field">
+									<label > old:</label>
+									<input type="text" placeholder="Old Password"> 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> new:</label>
+									<input type="text" placeholder="New Password"> 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> confirm:</label>
+									<input type="text" placeholder="Confirm Password"> 
+								</span>
+
+								<input class="mz-submit" type="submit" value="update">
+							</form>
+
+						</div>
+
+					</li>
+
+					<li class="col-100 mz-mini-sec" id="mz-mp-sec">
+							
+						<div class="mz-mp-partial">
+
+							<span onclick="mzClose('#mz-mp-partial')" class="mz-close">
+								<p>x</p>
+							</span>
+
+							<div class="clearfix mz-mp-np">
+
+								<div class="clearfix mz-num-pad">
+
+									<button id="btn" class="mz-num-ck mz-num-del"  onclick="backspace()">
+										<img src="img/back.png">
+									</button>
+									<button id="btn" class="mz-num-ck mz-num-rs"  onclick="reset()">
+										reset
+									</button>
+									<button id="btn" class="col-30 mz-num-dt" onclick="getNum(1)">
+									1
+									</button>
+									<button id="btn" class="col-30 mz-num-dt" onclick="getNum(2)">
+									2
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(3)">
+									3
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(4)">
+									4
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(5)">
+									5
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(6)">
+									6
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(7)">
+									7
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(8)">
+									8
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(9)">
+									9
+									</button>
+									<button id="btn" class="col-100 mz-num-zero"  onclick="getNum(0)">0</button>
+									
+								</div>
+							
+								<div >
+									<form class="clearfix mz-num-show">
+										<h2>master pin</h2>
+										<p>You have no pin, associated one to continue.</p>
+
+										<span class="clearfix mz-input-field">
+											<label>pin:</label>
+											<input type="number" max="9999" id="key" placeholder="1234">
+										</span>
+										
+										<span class="clearfix mz-input-field">
+											<label>confirm pin:</label>
+											<input type="number" max="9999" id="key1" placeholder="1234">
+										</span>
+										
+										<input class="mz-submit" type="submit" value="Confirm">
+									</form>
+								</div>
+
+							</div>
+
+							<div class="clearfix mz-mp-ep">
+
+								<div class="clearfix mz-num-pad">
+
+									<button id="btn" class="mz-num-ck mz-num-del"  onclick="backspace()">
+										<img src="img/back.png">
+									</button>
+									<button id="btn" class="mz-num-ck mz-num-rs"  onclick="reset()">
+										reset
+									</button>
+									<button id="btn" class="col-30 mz-num-dt" onclick="getNum(1)">
+									1
+									</button>
+									<button id="btn" class="col-30 mz-num-dt" onclick="getNum(2)">
+									2
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(3)">
+									3
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(4)">
+									4
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(5)">
+									5
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(6)">
+									6
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(7)">
+									7
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(8)">
+									8
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(9)">
+									9
+									</button>
+									<button id="btn" class="col-100 mz-num-zero"  onclick="getNum(0)">0</button>
+									
+								</div>
+							
+								<div >
+									<form class="mz-num-show">
+										<p>Enter Your Pin</p>
+
+										<span class="clearfix mz-input-field">
+											<label>pin:</label>
+											<input type="number" max="9999" id="key" placeholder="1234">
+										</span>
+										
+										<span class="clearfix mz-input-field">
+											<label>confirm pin:</label>
+											<input type="number" max="9999" id="key1" placeholder="1234">
+										</span>
+										
+										<input class="mz-submit" type="submit" value="Confirm">
+									</form>
+								</div>
+
+							</div>
+
+							<div class="clearfix mz-mp-cp">
+
+								<div class="clearfix mz-num-pad">
+
+									<button id="btn" class="mz-num-ck mz-num-del"  onclick="backspace()">
+										<img src="img/back.png">
+									</button>
+									<button id="btn" class="mz-num-ck mz-num-rs"  onclick="reset()">
+										reset
+									</button>
+									<button id="btn" class="col-30 mz-num-dt" onclick="getNum(1)">
+									1
+									</button>
+									<button id="btn" class="col-30 mz-num-dt" onclick="getNum(2)">
+									2
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(3)">
+									3
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(4)">
+									4
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(5)">
+									5
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(6)">
+									6
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(7)">
+									7
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(8)">
+									8
+									</button>
+									<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(9)">
+									9
+									</button>
+									<button id="btn" class="col-100 mz-num-zero"  onclick="getNum(0)">0</button>
+									
+								</div>
+							
+								<div >
+									<form class="mz-num-show">
+										<p>Enter Your Pin</p>
+
+										<span class="clearfix mz-input-field">
+											<label>pin:</label>
+											<input type="number" max="9999" id="key" placeholder="1234">
+										</span>
+										
+										<span class="clearfix mz-input-field">
+											<label>confirm pin:</label>
+											<input type="number" max="9999" id="key1" placeholder="1234">
+										</span>
+										
+										<input class="mz-submit" type="submit" value="Confirm">
+									</form>
+								</div>
+
+							</div>
+
+						</div>
+
+					</li>
+					<li class="col-100 mz-mini-sec" id="mz-sq-sec">
+							
+						<div class="mz-sq-partial">
+
+							<span onclick="mzClose('#mz-sq-partial')" class="mz-close">
+								<p>x</p>
+							</span>
+
+							<form class="mz-sq-form">  <!-- to manipulate label form due to character (to long for initial style) -->
+								<h2>change security question</h2>
+
+								<span class="clearfix mz-input-field">
+									<label> old <br>
+									question:</label>
+									<input type="text" placeholder="What is my Name ?"> 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> old <br>
+									answer:</label>
+									<input type="text" placeholder="John Doe"> 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> new <br>
+									question:</label>
+									<input type="text" placeholder="What is my favorite game ?"> 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> new<br>
+									 answer:</label>
+									<input type="text" placeholder="Basket Ball"> 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> confirm <br>
+									answer</label>
+									<input type="text" placeholder="Basket Ball"> 
+								</span>
+
+								<input class="mz-submit" type="submit" value="Update">
+							</form>
+
+						</div>
+
+					</li>
+					<li class="col-100 mz-mini-sec" id="mz-ae-sec">
+							
+						<div class="mz-ae-partial">
+							<span onclick="mzClose('#mz-ae-partial')" class="mz-close">
+								<p>x</p>
+							</span>
+
+							<form class="mz-ae-form">
+								<h2>auto entry details</h2>
+
+								<span class="clearfix mz-input-field">
+									<label> limit amount <span>$</span></label>
+									<input type="text" placeholder="1000" class="mz-ae-input">
+									<span class="mz-input-tag">.00 ?</span>
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> entry fee <span>$</span></label>
+									<input type="text" placeholder="2000" class="mz-ae-input">
+									<span class="mz-input-tag">.00 ?</span>
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> start date</label>
+									<input type="date" > 
+								</span>
+
+								<span class="clearfix mz-input-field">
+									<label> end date</label>
+									<input type="date" > 
+								</span>
+								
+								<input class="mz-submit" type="submit" value="Confirm">
+							</form>
+
+						</div>
+
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- <script src="js/script.js"></script> -->
+	</body>
+</html>

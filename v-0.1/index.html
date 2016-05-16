@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<meta name="charset" content="UTF-8">
+		<meta name="keyword" content="softzest">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body >
+
+	<div class="container">
+
+		<section class="clearfix " id="mz-partial">
+			
+			<ul class="clearfix col-50 mz-pc-view">
+
+				<li class="col-100" id="mz-pc">
+					
+					<div class="mz-icon">
+						<div onclick="mzPcCtrl(1)">
+							<i class="fa fa-fw fa-lock fa-5x"></i>
+						</div>
+						<span class="mz-icon-show">
+							please help
+						</span>
+					</div>
+					<div>
+						<p>password change</p>
+					</div>
+
+				</li>
+				
+				<li class="col-100" id="mz-mp">
+					
+					<div class="mz-icon">
+						<div onclick="mzPcCtrl(2)">
+							<i class="fa fa-fw fa-table fa-5x"></i>
+						</div>
+						<span class="mz-icon-show">
+							please help
+						</span>
+					</div>
+					<div>
+						<p>master pin</p>
+					</div>
+
+				</li>
+
+			</ul>
+
+			<ul class="col-50 clearfix mz-pc-view">
+				
+				<li class="col-100" id="mz-sq">
+					
+					<div class="mz-icon">
+						<div onclick="mzPcCtrl(3)">
+							<i class="fa fa-fw fa-question fa-5x"></i>
+						</div>
+						<span class="mz-icon-show">
+							please help
+						</span>
+					</div>
+					<div>
+						<p>security question</p>
+					</div>
+
+				</li>
+				
+				<li class="col-100" id="mz-ae">
+					
+					<div class="mz-icon">
+						<div onclick="mzPcCtrl(4)">
+							<i class="fa fa-fw fa-refresh fa-5x"></i>
+						</div>
+						<span class="mz-icon-show">
+							please help
+						</span>
+					</div>
+					<div>
+						<p>auto entry</p>
+					</div>
+
+				</li>
+
+			</ul>
+
+		</section>
+
+		<section class="mz-partial-mini">
+
+			<div>
+				<ul>
+					<li>
+						
+						<div class="col-100 mz-mini-sec" id="mz-pc-partial">
+							
+							<div class="mz-pc-partial">
+
+								<span onclick="mzClose('#mz-pc-partial')" class="mz-close">
+									<p>x</p>
+								</span>
+
+								<form>
+									<h2>change password</h2>
+
+									<span class="mz-input-field">
+										<label class="mz-top-label"> old:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> new:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> confirm:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<input class="mz-submit" type="submit" value="update">
+								</form>
+
+							</div>
+
+						</div>
+
+					</li>
+
+					<li>
+						<div class="col-100 mz-mini-sec" id="mz-mp-partial">
+							
+							<div class="mz-mp-partial">
+
+								<span onclick="mzClose('#mz-mp-partial')" class="mz-close">
+									<p>x</p>
+								</span>
+
+								<div class="">
+
+									<div class="clearfix mz-num-pad">
+
+										<button id="btn" class="mz-num-ck mz-num-del"  onclick="backspace()">
+											<img src="img/back.png">
+										</button>
+										<button id="btn" class="mz-num-ck mz-num-rs"  onclick="reset()">
+											reset
+										</button>
+										<button id="btn" class="col-30 mz-num-dt" onclick="getNum(1)">
+										1
+										</button>
+										<button id="btn" class="col-30 mz-num-dt" onclick="getNum(2)">
+										2
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(3)">
+										3
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(4)">
+										4
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(5)">
+										5
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(6)">
+										6
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(7)">
+										7
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(8)">
+										8
+										</button>
+										<button id="btn" class="col-30 mz-num-dt"  onclick="getNum(9)">
+										9
+										</button>
+										<button id="btn" class="col-100 mz-num-zero"  onclick="getNum(0)">0</button>
+										
+									</div>
+								</div>
+								<div >
+									<form class="mz-num-show">
+										<h2>master pin</h2>
+										<span class="mz-input-field">
+											<label>pin:</label>
+											<input type="number" max="9999" id="key" >
+										</span>
+										
+										<span class="mz-input-field">
+											<label>confirm pin:</label>
+											<input type="number" max="9999" id="key1" >
+										</span>
+										
+										<input class="mz-submit" type="submit" value="Confirm">
+									</form>
+								</div>
+
+							</div>
+
+						</div>
+					</li>
+					<li>
+						<div class="col-100 mz-mini-sec" id="mz-sq-partial">
+							
+							<div class="mz-sq-partial">
+
+								<span onclick="mzClose('#mz-sq-partial')" class="mz-close">
+									<p>x</p>
+								</span>
+
+								<form>
+									<h2>change security question</h2>
+
+									<span class="mz-input-field">
+										<label> old question:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> old answer:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> new question:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> new answer:</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> confirm question</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<span class="mz-input-field">
+										<label> confirm answer</label>
+										<input type="text" placeholder="E.g(2693)"> 
+									</span>
+
+									<input class="mz-submit" type="submit" value="Update">
+								</form>
+
+							</div>
+
+						</div>
+					</li>
+					<li>
+						<div class="col-100 mz-mini-sec" id="mz-ae-partial">
+							
+							<div class="mz-ae-partial">
+							<span onclick="mzClose('#mz-ae-partial')" class="mz-close">
+								<p>x</p>
+							</span>
+
+							<form>
+								<h2>auto entry details</h2>
+								<label> limit amount <span>$</span>
+									<input type="text" placeholder="E.g(2693)"><span>.00 ?</span>
+								</label>
+								<label> entry fee <span>$</span>
+									<input type="text" placeholder="E.g(2693)"> <span>.00 ?</span>
+								</label>
+								<label> start date
+									<input type="date" > 
+								</label>
+								<label> end date
+									<input type="date" > 
+								</label>
+								<input class="mz-submit" type="submit" value="Confirm">
+							</form>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+	</div>
+	<script src="js/script.js"></script>
+	</body>
+</html>
