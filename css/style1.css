@@ -227,31 +227,6 @@ a {
 	margin: 0 auto;
 }
 
-
-	
-/*
-#mz-partial ul {
-	border-right: 1px solid #bcbcbc;
-	padding: 30px 100px;
-	font-weight: 600;
-}
-
-#mz-partial ul:last-of-type {
-	border-right: none;
-
-}
-
-#mz-partial li {
-	text-transform: capitalize;
-	text-align: center;
-	padding: 50px 0;
-	border-bottom: 1px solid #bcbcbc;
-}
-
-#mz-partial li:last-of-type {
-	border-bottom: none;
-}*/
-
 .mz-icon {
 	position: relative;
 	display: inline-block;
@@ -261,6 +236,7 @@ a {
 
 .mz-icon i {
 	display: inline;
+	cursor: pointer;
 }
 
 .mz-icon i:hover {
@@ -377,6 +353,8 @@ a {
 	padding: 10px ;
 	outline: none;
 	font-size: 12px;
+	height: 36px;
+	overflow: hidden;
 }
 
 .mz-pc-partial,
@@ -416,7 +394,7 @@ a {
 	padding: 12px;
 	font-size: 12px;
 	float: left;
-
+	height: 36px;
 }
 
 .mz-sq-form label {
@@ -448,6 +426,7 @@ a {
 	padding: 12px 0;
 	font-size: 12px;
 	padding-left: 20px;
+	height: 36px;
 }
 
 .mz-input-field input {
