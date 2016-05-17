@@ -48,7 +48,7 @@
 						<h3>amount</h3>
 						<div>
 							<span class="mz-h-cash">$</span>
-							<input type="number" placeholder="30" required>
+							<input type="number" placeholder="30" id="mzHCashVal1" onkeyup="changeVal('mzHCashVal1', 'mzHCash1')" required>
 						</div>
 						
 					</div>
@@ -72,7 +72,7 @@
 							
 							<div class="mz-dp-tt">
 								<p>
-									Total: <span class="mz-h-cash">$&nbsp;0.00</span>
+									Total: <span class="mz-h-cash" >$&nbsp;<span id="mzHCash1">0</span>.00</span>
 								</p>
 							</div>
 						</div>
@@ -90,7 +90,7 @@
 					<div class="mz-dp-sc">
 						<h3>amount</h3>
 						<span class="mz-h-cash">$</span>
-						<input type="number" placeholder="30" required>
+						<input type="number" placeholder="30" id="mzHCashVal2" onkeyup="changeVal('mzHCashVal2', 'mzHCash2')" required>
 						
 					</div>
 					<div class="mz-dp-sc">
@@ -135,7 +135,7 @@
 						
 						<div class="mz-dp-tt">
 							<p>
-								Total: <span class="mz-h-cash">$&nbsp;0.00</span>
+								Total: <span class="mz-h-cash" >$&nbsp;<span id="mzHCash2">0</span>.00</span>
 							</p>
 						</div>
 
@@ -154,7 +154,7 @@
 
 						<div class="mz-wt-amt">
 							<span class="mz-h-cash">$</span>
-							<input type="number" placeholder="150" required>
+							<input type="number" placeholder="150" id="mzHCashVal3" onkeyup="changeVal200('mzHCashVal3', 'mzHCash3')" required>
 							<label>less than <span class="mz-h-cash">$&nbsp;200.00</span></label>
 						</div>
 						
@@ -178,7 +178,7 @@
 						
 						<div class="mz-dp-tt">
 							<p>
-								Total: <span class="mz-h-cash">$&nbsp;0.00</span>
+								Total: <span class="mz-h-cash" >$&nbsp;<span id="mzHCash3">0</span>.00</span>
 							</p>
 						</div>
 

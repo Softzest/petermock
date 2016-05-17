@@ -210,3 +210,27 @@ function mzAbleInp(inputId) {
 	}
 	
 }
+
+//to change total value to input value
+
+function changeVal(input, total) {
+	var inputField = document.getElementById(input);
+	var totalField = document.getElementById(total);
+	if (inputField.value.length <= 10) {
+		totalField.innerHTML = inputField.value;
+	} else {
+		inputField.value = totalField.innerHTML;
+	}
+}
+
+//amount less than 200
+function changeVal200(input, total) {
+	var inputField = document.getElementById(input);
+	var totalField = document.getElementById(total);
+	if (inputField.value.length <= 3) {
+		totalField.innerHTML = inputField.value;
+	} else {
+		inputField.value = totalField.innerHTML;
+	}
+	// totalField.innerHTML = inputField.value;
+}
