@@ -1,10 +1,11 @@
 /**
- * Created by TK on 13/02/2016.
+ * Created by Adekunle Adeyemi on 13/02/2016.
  */
 
 (function(window , angular){
     'use strict';
 
+    var jq = jQuery;
     angular.module('MZApp')
 
 
@@ -39,6 +40,15 @@
                     if (toState.redirectTo) {
                         event.preventDefault();
                         $state.go(toState.redirectTo.state, toParams);
+                    }
+
+                    var mainSettingView = jq(document).find('.mz-main');
+                    if(toState.name = 'settings'){
+                
+                        if(mainSettingView.css('display') == 'none'){
+                            mainSettingView.show();
+                        }
+                        // jq(document).find('.mz-set-pa').slideDown(500);
                     }
 
                     /*if(!Authentication.isLoggedIn()){

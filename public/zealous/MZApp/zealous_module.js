@@ -7,14 +7,15 @@
     angular.module('MZApp', [
         'ngRoute',
         'ngMessages',
+
         'ui.router',
 
         // App Component Modules
         'MZApp.access',
         'MZApp.account',
         'MZApp.entry',
-        //'MZApp.fq',
-        //'MZApp.ggame',
+        /*'MZApp.fq',
+        'MZApp.ggame',*/
         'MZApp.profile',
         'MZApp.settings',
         'MZApp.history',

@@ -1,442 +1,94 @@
 
 
-    <div id="main-wrapper">
-        <div qp-left-navbar id="left-navbar-wrapper"></div>
+<div id="main-wrapper">
 
-        <div id="content-wrapper" class="mdl-color--grey-300">
-            <div qp-top-navbar id="top-navebar-wrapper"></div>
-           <!--  <div ui-view>Settings</div>
-            <div class="drawer-wrapper"> The drawer items wil show here</div> -->
-            <section class="content-grid mdl-grid entry-con">
+    <div qp-left-navbar id="left-navbar-wrapper"></div>
 
-            	<div class="content-column mdl-cell mdl-cell--1-col">
-            	</div>
+    <div id="content-wrapper" class="mdl-color--grey-300">
 
-				<div class="content-column mdl-cell mdl-cell--10-col">
+        <div qp-top-navbar id="top-navbar-wrapper"></div>
+
+        <section class="content-con">
+
+	        <div class="clearfix mz-partial">
+				
+				<ul class="clearfix mz-main" >
+
+					<li class="col-50 mz-pc">
+						
+						<div class="mz-icon">
+							<a ui-sref="settings.password" ng-click="settings.showPartials()" class="ms-set-mn">
+								<i class="fa fa-fw fa-lock fa-5x"></i>
+							</a>
+							<span class="mz-icon-show">
+								please help
+							</span>
+						</div>
+						<div>
+							<p>password change</p>
+						</div>
+
+					</li>
 					
-					<ul class="clearfix mz-main">
-
-						<li class="col-50 mz-pc">
-							
-							<div class="mz-icon">
-								<div onclick="mzPcCtrl(1)">
-									<i class="fa fa-fw fa-lock fa-5x"></i>
-								</div>
-								<span class="mz-icon-show">
-									please help
-								</span>
-							</div>
-							<div>
-								<p>password change</p>
-							</div>
-
-						</li>
+					<li class="col-50 mz-mp">
 						
-						<li class="col-50 mz-mp">
-							
-							<div class="mz-icon">
-								<div onclick="mzPcCtrl(2)">
-									<i class="fa fa-fw fa-table fa-5x"></i>
-								</div>
-								<span class="mz-icon-show">
-									please help
-								</span>
-							</div>
-							<div>
-								<p>master pin</p>
-							</div>
+						<div class="mz-icon">
+							<a ui-sref="settings.master" ng-click="settings.showPartials()" class="ms-set-mn">
+								<i class="fa fa-fw fa-table fa-5x"></i>
+							</a>
+							<span class="mz-icon-show">
+								please help
+							</span>
+						</div>
+						<div>
+							<p>master pin</p>
+						</div>
 
-						</li>
+					</li>
 
-						<li class="col-50 mz-sq">
-							
-							<div class="mz-icon">
-								<div onclick="mzPcCtrl(3)">
-									<i class="fa fa-fw fa-question fa-5x"></i>
-								</div>
-								<span class="mz-icon-show">
-									please help
-								</span>
-							</div>
-							<div>
-								<p>security question</p>
-							</div>
-
-						</li>
+					<li class="col-50 mz-sq">
 						
-						<li class="col-50 mz-ae">
-							
-							<div class="mz-icon">
-								<div onclick="mzPcCtrl(4)">
-									<i class="fa fa-fw fa-refresh fa-5x"></i>
-								</div>
-								<span class="mz-icon-show">
-									please help
-								</span>
-							</div>
-							<div>
-								<p>auto entry</p>
-							</div>
+						<div class="mz-icon">
+							<a ui-sref="settings.sq" ng-click="settings.showPartials()" class="ms-set-mn">
+								<i class="fa fa-fw fa-question fa-5x"></i>
+							</a>
+							<span class="mz-icon-show">
+								please help
+							</span>
+						</div>
+						<div>
+							<p>security question</p>
+						</div>
+
+					</li>
+					
+					<li class="col-50 mz-ae">
+						
+						<div class="mz-icon">
+							<a ui-sref="settings.entry" ng-click="settings.showPartials()" class="ms-set-mn">
+								<i class="fa fa-fw fa-refresh fa-5x"></i>
+							</a>
+							<span class="mz-icon-show">
+								please help
+							</span>
+						</div>
+						<div>
+							<p>auto entry</p>
+						</div>
+
+					</li>
+
+				</ul>
+
+					
+
+			</div>
+
+			<div ui-view class="mz-set-pa" ></div>
+		</section>			
+
+        <div class="drawer-wrapper"></div>
 
-						</li>
-
-					</ul>
-
-				</div>
-
-				<div class="mz-partial-mini">
-
-					<div>
-						<ul class="clearfix mz-partial-box">
-							<li class="col-100 mz-mini-sec" id="mz-pc-sec">
-															
-								<div class="mz-pc-partial">
-
-									<span onclick="mzClose('#mz-pc-sec')" class="mz-close">
-										<p>x</p>
-									</span>
-
-									<h2>change password</h2>
-
-									<form>
-										
-
-										<span class="clearfix mz-input-field">
-											<label > old:</label>
-											<input type="text" placeholder="Old Password" required > 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> new:</label>
-											<input type="text" placeholder="New Password" required > 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> confirm:</label>
-											<input type="text" placeholder="Confirm Password" required > 
-										</span>
-
-										<input class="mz-submit" type="submit" value="update">
-									</form>
-
-								</div>
-
-							</li>
-
-							<li class="col-100 mz-mini-sec" id="mz-mp-sec">
-									
-								<div class="mz-mp-partial">
-
-									
-
-									<div class="clearfix mz-mp-np">
-									<span onclick="mzClose('#mz-mp-sec')" class="mz-close">
-										<p>x</p>
-									</span>
-
-									<h2>master pin</h2>
-
-									<p class="mz-mini-info">You have no pin, associated one to continue.</p>
-
-									<div class="clearfix mz-num-pad mzShowPad1">
-
-											<button class="mz-num-ck mz-num-del"  onclick="backspace(1)">
-												<img src="img/back.png">
-											</button>
-											<button class="mz-num-ck mz-num-rs"  onclick="reset(1)">
-												reset
-											</button>
-											<button class="col-30 mz-num-dt" onclick="getNum1(1)">
-											1
-											</button>
-											<button class="col-30 mz-num-dt" onclick="getNum1(2)">
-											2
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(3)">
-											3
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(4)">
-											4
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(5)">
-											5
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(6)">
-											6
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(7)">
-											7
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(8)">
-											8
-											</button>
-											<button class="col-30 mz-num-dt"  onclick="getNum1(9)">
-											9
-											</button>
-											<button class="col-100 mz-num-zero"  onclick="getNum1(0)">0</button>
-											
-										</div>
-									
-										<div >
-
-										
-
-									
-
-											<form class="clearfix mz-num-show">
-												
-												
-
-												<span class="clearfix mz-input-field">
-													<label>pin:</label>
-													<input type="number" max="9999" id="mzNumKey11" placeholder="1234" required >
-												</span>
-												
-												<span class="clearfix mz-input-field">
-													<label>confirm pin:</label>
-													<input type="number" max="9999" id="mzNumKey12" placeholder="1234" required>
-												</span>
-
-												<input class="mz-submit" type="submit" value="Confirm">
-											</form>
-
-											
-
-
-										</div>
-
-									</div>
-
-									<div class="clearfix mz-mp-ep">
-
-										
-										<p class="mz-mini-info">Enter Your Pin</p>
-
-
-
-										<div >
-
-											<div class="clearfix mz-num-pad mzShowPad2">
-
-												<button class="mz-num-ck mz-num-del"  onclick="backspace(2)">
-													<img src="img/back.png">
-												</button>
-												<button class="mz-num-ck mz-num-rs"  onclick="reset(2)">
-													reset
-												</button>
-												<button class="col-30 mz-num-dt" onclick="getNum2(1)">
-												1
-												</button>
-												<button class="col-30 mz-num-dt" onclick="getNum2(2)">
-												2
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(3)">
-												3
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(4)">
-												4
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(5)">
-												5
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(6)">
-												6
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(7)">
-												7
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(8)">
-												8
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum2(9)">
-												9
-												</button>
-												<button class="col-100 mz-num-zero"  onclick="getNum2(0)">0</button>
-												
-											</div>
-
-											<form class="clearfix mz-num-show">
-												
-
-												<span class="clearfix mz-input-field">
-													<label>pin:</label>
-													<input type="number" max="9999" id="mzNumKey21" placeholder="1234" required>
-												</span>
-																							
-												<input class="mz-submit" type="submit" value="Access">
-											</form>
-
-											
-
-
-										</div>
-
-									</div>
-
-									<div class="clearfix mz-mp-cp">
-
-										<p class="mz-mini-info">Enter Your Pin</p>
-									
-										<div >
-
-											<div class="clearfix mz-num-pad mzShowPad3">
-
-												<button class="mz-num-ck mz-num-del"  onclick="backspace(4)">
-													<img src="img/back.png">
-												</button>
-												<button class="mz-num-ck mz-num-rs"  onclick="reset(4)">
-													reset
-												</button>
-												<button class="col-30 mz-num-dt" onclick="getNum3(1)">
-												1
-												</button>
-												<button class="col-30 mz-num-dt" onclick="getNum3(2)">
-												2
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(3)">
-												3
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(4)">
-												4
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(5)">
-												5
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(6)">
-												6
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(7)">
-												7
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(8)">
-												8
-												</button>
-												<button class="col-30 mz-num-dt"  onclick="getNum3(9)">
-												9
-												</button>
-												<button class="col-100 mz-num-zero"  onclick="getNum3(0)">0</button>
-												
-											</div>
-
-											<form class="clearfix mz-num-show">
-												
-
-												<span class="clearfix mz-input-field">
-													<label>pin:</label>
-													<input type="number" max="9999" id="mzNumKey31" placeholder="1234" required>
-												</span>
-												
-												<span class="clearfix mz-input-field">
-													<label>confirm pin:</label>
-													<input type="number" max="9999" id="mzNumKey32" placeholder="1234" required>
-												</span>
-												
-												<input class="mz-submit" type="submit" value="Confirm">
-											</form>
-
-											
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</li>
-							<li class="col-100 mz-mini-sec" id="mz-sq-sec">
-									
-								<div class="mz-sq-partial">
-
-									<span onclick="mzClose('#mz-sq-sec')" class="mz-close">
-										<p>x</p>
-									</span>
-
-									<h2>change security question</h2>
-
-									<form class="mz-sq-form">  <!-- to manipulate label form due to character (to long for initial style) -->
-										
-
-										<span class="clearfix mz-input-field">
-											<label> old <br>
-											question:</label>
-											<input type="text" placeholder="What is my Name ?" required> 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> old <br>
-											answer:</label>
-											<input type="text" placeholder="John Doe" required> 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> new <br>
-											question:</label>
-											<input type="text" placeholder="What is my favorite game ?" required> 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> new<br>
-											 answer:</label>
-											<input type="text" placeholder="Basket Ball" required> 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> confirm <br>
-											answer</label>
-											<input type="text" placeholder="Basket Ball" required> 
-										</span>
-
-										<input class="mz-submit" type="submit" value="Update">
-									</form>
-
-								</div>
-
-							</li>
-							<li class="col-100 mz-mini-sec" id="mz-ae-sec">
-									
-								<div class="mz-ae-partial">
-									<span onclick="mzClose('#mz-ae-sec')" class="mz-close">
-										<p>x</p>
-									</span>
-
-									<h2>auto entry details</h2>
-
-									<form class="mz-ae-form">
-
-										<span class="clearfix mz-input-field">
-											<label> limit amount <span>$</span></label>
-											<input type="text" placeholder="1000" class="mz-ae-input" required>
-											<span class="mz-input-tag">.00 ?</span>
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> entry fee <span>$</span></label>
-											<input type="text" placeholder="2000" class="mz-ae-input" required>
-											<span class="mz-input-tag">.00 ?</span>
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> start date</label>
-											<input type="text" class="mz-pickDate" required > 
-										</span>
-
-										<span class="clearfix mz-input-field">
-											<label> end date</label>
-											<input type="text" class="mz-pickDate" required > 
-										</span>
-										
-										<input class="mz-submit" type="submit" value="Confirm">
-									</form>
-
-								</div>
-
-							</li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="content-column mdl-cell mdl-cell--1-col">
-            	</div>
-			</section>
-        </div>
     </div>
+
+</div>

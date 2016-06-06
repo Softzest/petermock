@@ -1,0 +1,165 @@
+<section class="container mz-dp-rm"> <!-- deposit room -->
+	<div class="mz-dp-mn" id="mz-dp-mn" > <!-- deposit meean -->
+					
+		<h2>means of deposit</h2>
+
+		<form class="clearfix mz-dp-fm" id="mz-dp-fm" ng-submit="account.selectAcc()" name="mz-dp-fm">
+			<div class="mz-dp-sc">
+				<input type="radio" id="mzPpMn" name="means" value="paypal" required>
+				<span>
+					<label for="mzPpMn">paypal
+						<p>
+							minimum deposit <span class="mz-h-cash">$&nbsp;5.00</span>
+						</p>
+					</label>
+				</span>
+			</div>
+			<div class="mz-dp-sc">
+				<input type="radio" id="mzCcMn" name="means" value="credit-card" required>
+				<span>
+					<label for="mzCcMn">debit/credit card
+						<p>
+							minimum deposit <span class="mz-h-cash">$&nbsp;10.00</span>
+						</p>
+					</label>
+				</span>
+			</div>
+
+			<button class="mz-dp-btn mz-dp-pc" >proceed</button>
+
+		</form>
+	</div> <!-- /deposit meean -->
+
+	<div class="mz-dp-pp" id="mz-dp-pp"> <!-- paypal means -->
+
+		<h2>select account</h2>
+		<form class="clearfix" name="mzDpPp" ng-submit="account.valDeposit()">
+
+			<div class="mz-dp-sc">
+				<h3>amount</h3>
+				<div>
+					<span class="mz-h-cash">$</span>
+					<input type="number" placeholder="30" min="5" max="9999999999" ng-model="depositAmount" required>
+				</div>
+				
+			</div>
+			<div class="mz-dp-sc">
+				<h3>select account</h3>
+				<div>
+				<input type="radio" name="user-email" id="email1" ng-click="account.mzAbleInp()" required>
+					<label class="small-letter" for="email1">hardeyemi@gmail.com</label>
+				</div>
+				
+				<div class="mz-dp-ae">
+					<input type="radio" name="user-email" value="addNewMail" id="mzDpEmail" ng-click="account.mzAbleInp()" required>
+					<label for="mzDpEmail">add new</label>
+				</div>
+
+				<div class="">
+					<div id="mzDpNewMailCon">
+						<label>email</label>
+						<input type="email" name="new-email" placeholder="username@example.com" id="mzDpNewMail" disabled required>
+					</div>
+					
+					<div class="mz-dp-tt">
+						<p>
+							Total: <span class="mz-h-cash" >$&nbsp;<span id="mzHCash1" ng-bind="depositAmount">0</span>.00</span>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<button type="button" class="mz-dp-btn mz-dp-bk" ng-click="account.backSelect('#mz-dp-mn','#mz-dp-pp')" >back</button>
+			<button class="mz-dp-btn mz-dp-pc" type="submit" >proceed</button>
+
+		</form>
+	</div> <!-- /paypal means -->
+
+	<div class="mz-dp-cc" id="mz-dp-cc"> <!-- credit card means -->
+
+		<h2>select account</h2>
+		<form class="clearfix" name="mzDpCc" ng-submit="account.valDeposit()">
+			
+			<div class="mz-dp-sc">
+				<h3>amount</h3>
+				<span class="mz-h-cash">$</span>
+				<input type="number" placeholder="30" min="10" name="depositAmount2"  ng-model="depositAmount2" required>
+				
+			</div>
+			<div class="mz-dp-sc" id="mzNewCcDetail">
+				<h3>select card</h3>
+				<div>
+					<input type="radio" name="user-card" id="mzCard1" ng-click="account.mzAbleInp()" required>
+					<label for="mzCard1">3658*************6732</label>
+				</div>
+				
+				<div class="mz-dp-ae" >
+					<input type="radio" name="user-card" id="mzDpCcard" value="addNewCard" ng-click="account.mzAbleInp()" required>
+					<label for="mzDpCcard">add new</label>
+				</div>
+
+				<div class="mz-cc-fm" id="mzCcFm" > 
+					<div>
+						<label>name on card</label>
+						<input type="text" name="new-name" class="mz-dp-cd" disabled required> <!-- mz-dp-cd = mz deposit card detail -->
+					</div>
+
+					<div>
+						<div>
+							<label>ccv</label>
+							<input type="number" name="new-ccv" class="mz-dp-cd" disabled required>
+						</div>
+						<div>
+							<label>expire</label>
+							<input type="text" name="new-expire" class="mz-dp-cd" disabled required>
+						</div>
+					</div>
+
+					<div>
+						<label>card number</label>
+						<input type="number" name="new-cardnum" class="mz-dp-cd" disabled required>
+					</div>
+
+					<div>
+						<label>address</label>
+						<input type="text" name="new-add" class="mz-dp-cd" disabled required>
+					</div>
+				</div>
+				
+				<div class="mz-dp-tt">
+					<p>
+						Total: <span class="mz-h-cash" >$&nbsp;<span id="mzHCash2" ng-bind="depositAmount2" >0</span>.00</span>
+					</p>
+				</div>
+
+			</div>
+
+			<button type="button" class="mz-dp-btn mz-dp-bk" ng-click="account.backSelect('#mz-dp-mn','#mz-dp-cc')">back</button>
+			<button class="mz-dp-btn mz-dp-pc" >proceed</button>
+
+		</form>
+	</div><!-- /credit card means -->
+
+	<div class="mz-vl-mn" id="mz-vl-mn"> <!-- val withdraw means -->
+
+		<h2>master pin</h2>
+
+		<div class="mz-vl-bx">
+
+			<form class="clearfix mz-vl-fm" ng-submit="processPayment()">
+			<h3>enter pin</h3>
+				<div class="mz-dp-sc">
+					<span class="mz-dp-sf">
+					<input type="password" name="mz-dp-sp" id="mzNumPay" placeholder="****" required>
+					</span>
+				</div>
+
+				<button type="button" class="mz-dp-btn mz-dp-bk" ng-click="account.backSelect('back')">back</button>
+				<button class="mz-dp-btn mz-dp-pc" >proceed</button>
+				
+			</form>
+
+		</div>
+	</div>
+</section>

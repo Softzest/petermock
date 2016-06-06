@@ -1,6 +1,7 @@
-/**
+/*
  * Project Name: Softzest Sucre;
  *	Author: Peter Olayinka;
+ *  Date: ;
  *  Credit: Softzest Inc.;
  */
 
@@ -156,10 +157,9 @@ p {
 	clear: both;
 }
 
-.container {
-	width: 80%;
+.container {/*
+	width: 80%;*/
 	margin: 0 auto;
-	padding: 2em;
 }
 
 a {
@@ -170,7 +170,15 @@ a {
 .mz-main {
 	text-align: center;
 	text-transform: capitalize;
-	padding: 30px 0;
+	margin: 30px 0;
+}
+
+.mz-set-pa {
+	margin: 30px 0;
+}
+
+.mz-mini-sec form {
+	width: 100%;
 }
 
 .mz-main li {
@@ -211,6 +219,20 @@ a {
 	position: relative;
 }
 
+.mz-main {
+	position: relative;
+}
+
+.mz-main:before {
+	position: absolute;
+	left: 50%;
+	content: "";
+	width: 1px;
+	display: block;
+	height: 75%;
+	background-color: #bcbcbc;
+}
+/*
 .mz-partial:before {
 	position: absolute;
 	left: 50%;
@@ -219,7 +241,7 @@ a {
 	display: block;
 	height: 100%;
 	background-color: #bcbcbc;
-}
+}*/
 
 .mz-partial-box {
 	width: 400px;
@@ -304,6 +326,8 @@ a {
 	border: 1px solid #f60;
 	width: 48%;
 	margin-bottom: 5px;
+	min-height: 31px;
+	vertical-align: top;
 }
 
 .mz-num-del {
@@ -350,7 +374,7 @@ a {
 
 .mz-partial-mini .mz-mini-sec {
 	position: relative;
-	margin: 10px 0;
+	margin-bottom: 10px;
 	width: 400px;
 	clear: both;
 }
@@ -500,13 +524,13 @@ a {
 
 .mz-ac-h,
 .mz-gm-h {
-	margin-right: 2.5%;
+	/*margin-right: 2.5%;*/
 	background: #fff;
 	border: 1px solid #dcdcdc;
 }
 
 .mz-ac-h {
-	margin-left: 2.5%;
+	/*margin-left: 2.5%;*/
 }
 
 .mz-ac-h h2,
@@ -699,11 +723,14 @@ a {
 }
 
 .box1 li,
+.box2 li {
+	padding: 5px 0;
+}
+
+.box1 li,
 .box2 li,
 .box3 ,
 .box5 li {
-	padding-top: 5px;
-	padding-bottom: 5px;
 	margin-bottom: 5px;
 	background-color: #fff;
 }
@@ -874,6 +901,21 @@ strong {
 }
 
 .box3 h3,
+.box4 h3,
+.box5 h3,
+.mz-box1-col3 h3 {
+    background-color: #46B6AC;
+    color: #fff;
+    padding-left: 10px;
+	padding-top: 10px;
+}
+
+.mz-box1-col3 h3 {
+    
+
+}
+
+.box3 h3,
 .box3-txtbox p,
 .box5 h3 {
 	border-bottom: 1px solid #ccc;
@@ -891,8 +933,6 @@ strong {
 .box4-data {
 	background-color: #fff;
 	text-align: left;
-	padding-top: 5px;
-	padding-bottom: 5px;
 	margin-bottom: 5px;
 
 }
@@ -961,11 +1001,12 @@ strong {
 }
 
 .mz-dp-rm {
-	margin: 30px auto;
+	margin: 0px auto;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: capitalize;
 }
+
 
 .mz-dp-rm h2 {
 	background-color: #46B6AC;
@@ -997,9 +1038,16 @@ strong {
 .mz-vl-mn {
 	background-color: #fff;
 	border: 1px solid #dcdcdc;
-	margin: 20px auto;
+	margin: 0px auto 3px auto;
 }
-
+.mz-dp-mn form,
+.mz-dp-pp form,
+.mz-dp-cc form,
+.mz-wt-mn form,
+.mz-vl-mn form {
+	width: 100%;
+}
+/*
 .mz-dp-mn,
 .mz-wt-mn,
 .mz-vl-mn {
@@ -1009,11 +1057,11 @@ strong {
 .mz-dp-pp,
 .mz-dp-cc {
 	width: 350px;
-}
+}*/
 
-.mz-dp-pp,
-.mz-dp-cc,
-.mz-wt-mn,
+.mz-dp-pp form,
+.mz-dp-cc form,
+.mz-wt-mn form,
 .mz-vl-bx,
 .mz-dp-fm {
 	padding: 10px;
@@ -1035,17 +1083,31 @@ strong {
 }
 
 .mz-dp-pc {
+	float: right;
+}
+
+.mz-dp-bk {
+	float: left;
+}
+
+/*.ng-invalid-required button[type=submit] {
+	border: 1px solid #ccc;
+	background-color: #ccc;
+	color: #fff;
+	cursor: default;
+}*/
+
+.mz-dp-btn {
 	margin-top: 10px;
 	padding: 10px;
 	border: 1px solid #46B6AC;
 	background-color: #46B6AC;
 	color: #fff;
 	text-transform: uppercase;
-	float: right;
 	cursor: pointer;
 }
 
-.mz-dp-pc:hover,
+.mz-dp-btn:hover,
 .mz-submit:hover {
 	background-color: #fff;
 	color: #46B6AC;
@@ -1070,7 +1132,10 @@ strong {
 	width: 100px;
 	display: inline-block;
 }
-
+/*
+#mzCcFm {
+	display: none;
+}*/
 
 .mz-dp-sf {
 	display: block;
@@ -1087,7 +1152,7 @@ strong {
 
 /*-- media query ---*/
 
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
 	.mz-num-pad {
 		position: static;
 		display: block;
@@ -1106,8 +1171,8 @@ strong {
 	}
 
 	.mz-ac-h, .mz-gm-h {
-	    margin-left: 0;
-	    margin-right: 0;
+	    margin-left: 0;*/
+/*	    margin-right: 0;
 	}
 
 	.mz-left-sidebar li {
@@ -1134,10 +1199,10 @@ strong {
 		display: none;
 	}*/
 
-	.mz-left-sidebar li,
+	/*.mz-left-sidebar li,
 	.mz-ac .mz-right-sidebar li {
-		float: left;
-	}
+		float: left;*/
+/*	}
 
 	.mz-left-sidebar a {
 		border-right: 1px solid #ccc;
@@ -1199,20 +1264,20 @@ strong {
 	.container {
 		width: 100%;
 	}
-}
+}*/
 
-@media(max-width: 520px) {
+/*@media(max-width: 520px) {
 
 	.mz-partial-mini h2 {
 		text-align: left;
 		padding-left: 20px;
 	}
 	
-}
+}*/
 
-@media(max-width: 420px) {
+/*@media(max-width: 420px) {
 
-	/*.mz-input-field input {
+	.mz-input-field input {
 		
 	}
 
@@ -1222,6 +1287,6 @@ strong {
 
 	.mz-ae-form .mz-input-tag {
 		coming back
-	}*/
+	}
 	
 }

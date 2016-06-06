@@ -1,5 +1,5 @@
 <div class="mdl-js-layout mdl-layout--fixed-header navbar-top">
-    <header class="mdl-color--white mdl-layout--fixed-header mdl-layout__header--transparent">
+    <header class="mdl-color--white mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row mdl-color-text--grey-800">
             <!-- Title -->
             <!--<span class="mdl-layout-title">Title</span>-->
@@ -8,10 +8,10 @@
                 <a class="mdl-navigation__link" ui-sref="entry">Entry</a>
                 <a class="mdl-navigation__link" ui-sref="gameboard">Board</a>
                 <a class="mdl-navigation__link" ui-sref="finalquest" >Quest</a>
-                <a class="mdl-navigation__link" ui-sref="account" >Account</a>
+                <a class="mdl-navigation__link" ui-sref="account.history" >Account</a>
             </nav>
             <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer" style="text-align: center; height: 100%;"><span class="game-title">Game Lucre<span><i class="material-icons">star</i></div>
+            <div class="mdl-layout-spacer" style="text-align: center">Game Lucre<i class="material-icons">star</i></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation menu-right">
                 <div class="mdl-navigation__link menu-icon-text"><span>Link3</span><i
@@ -31,7 +31,8 @@
                             <div class="arrow-menu">
                                 <div class="profile-menu">
                                     <a ui-sref="profile"  class="profile-link">profile</a>
-                                    <a ui-sref="account"  class="account-link">account</a>
+                                    <div class="menu-divider"></div>
+                                    <a ui-sref="account.history"  class="account-link">account</a>
                                 </div>
                                 <a  class="logout">Log Out</a>
                             </div>

@@ -18,7 +18,11 @@
     margin: 0;
     padding: 0;
     color: #333;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;/*
+    border-left: 1px solid #ccc;*/
+}
+
+.navbar-top {
     border-left: 1px solid #ccc;
 }
 
@@ -104,6 +108,15 @@ nav.popup-menu div.drop {
     height: 100%;
     text-transform: capitalize;
 }
+
+.popup-menu .drop:hover .dropdownContain {
+    display: block;
+}
+
+nav.popup-menu.active-menu:hover .dropdownContain {
+    display: block;
+}
+
 nav.popup-menu .dropdownContain {
     width: 220px;
     position: absolute;
@@ -115,12 +128,14 @@ nav.popup-menu .dropdownContain {
 nav.popup-menu.mdl-navigation__link:hover{
     display: block;
     background: #ededed;
+    /*color: red !important;*/
 }
 nav.popup-menu.mdl-navigation__link:hover a { color: white; }
-nav.popup-menu.mdl-navigation__link:hover .dropdownContain { top: 4em; }
+nav.popup-menu.mdl-navigation__link:hover .dropdownContain {/* top: 4em;*/ display: none;}
 
 nav.popup-menu.mdl-navigation__link.active-menu .dropdownContain{
     top: 4em;
+    display: block;
 }
 
 #top-navebar-wrapper {
@@ -292,10 +307,10 @@ nav.popup-menu.mdl-navigation__link.active-menu .dropdownContain{
 }
 #left-nav-list li{
     width: 100%;
-    height: 7%;
     text-align: center;
     padding-top: 20%;
     color: #fff;
+    margin-bottom: 10px;
     /*border: 1px solid #C0C0C0;*/
 }
 
@@ -323,15 +338,14 @@ nav.popup-menu.mdl-navigation__link.active-menu .dropdownContain{
     /*line-height: 4em;*/
 }
 
-.mdl-mini-footer{
-    width: 100%;
+.mdl-mini-footer {
+    width: 97%;
     height: auto;
-    position: absolute;
+    position: fixed;
     bottom: 0%;
-    left: 0%;
     padding: 0px;
-
 }
+
 .mdl-mini-footer__left-section{
     padding-left: 1%;
 }
@@ -348,12 +362,13 @@ nav.popup-menu.mdl-navigation__link.active-menu .dropdownContain{
 
 /****************** Drawer Items goes here *****************/
 .left-drawer{
-    height: calc(100% - 3em);
+    height: 400px;
     position: absolute;
-    top: 3em;
+    top: 0;
     left: 0%;
     z-index: 100;
-    border-top: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-left: none;
     /*border: 1px solid #000066;*/
 }
 .left-drawer .mdl-layout__header-row{

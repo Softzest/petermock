@@ -1,0 +1,72 @@
+<section class="container mz-dp-rm">
+	<div class="mz-wt-mn" id="mzWtMn"> <!-- withdraw means -->
+		<h2>withdraw</h2>
+		<form class="clearfix" ng-submit="account.valDeposit()">
+
+			<div class="mz-dp-sc" >
+				<h3>amount</h3>
+
+				<div class="mz-wt-amt">
+					<span class="mz-h-cash">$</span>
+					<input type="number" placeholder="150" min="0" max="200" ng-model="amountWithdraw" required>
+					<label>less than <span class="mz-h-cash">$&nbsp;200.00</span></label>
+				</div>
+				
+			</div>
+			<div class="mz-dp-sc" >
+				<h3>payment method</h3>
+				<div>
+					<label>
+						<input type="radio" name="pay-means"  required>
+						paypal
+					</label>
+				</div>
+				
+				<div>
+					<label>
+						<input type="radio" name="pay-means" required>
+						direct bank
+					</label>
+				</div>
+				
+				<div>
+					<label>
+						<input type="radio" name="pay-means" required>
+						western union
+					</label>
+				</div>
+				
+				<div class="mz-dp-tt">
+					<p>
+						Total: <span class="mz-h-cash" >$&nbsp;<span id="mzHCash3" ng-bind="amountWithdraw">0</span>.00</span>
+					</p>
+				</div>
+
+			</div>
+
+			<button class="mz-dp-btn mz-dp-pc">proceed</button>
+
+		</form>
+	</div> <!-- /withdraw means -->
+	<div class="mz-vl-mn" id="mz-vl-mn2"> <!-- val withdraw means -->
+
+		<h2>master pin</h2>
+
+		<div class="mz-vl-bx">
+
+			<form class="clearfix mz-vl-fm" ng-submit"account.processPayment()">
+			<h3>enter pin</h3>
+				<div class="mz-dp-sc">
+					<span class="mz-dp-sf">
+					<input type="password" name="mz-dp-sp" id="mzNumPay" placeholder="****" required>
+					</span>
+				</div>
+				
+				<button class="mz-dp-btn mz-dp-bk" type="button" ng-click="account.backSelect('#mzWtMn','#mz-vl-mn2')">back</button>
+				<button class="mz-dp-btn mz-dp-pc">proceed</button>
+				
+			</form>
+
+		</div>
+	</div>
+</section>

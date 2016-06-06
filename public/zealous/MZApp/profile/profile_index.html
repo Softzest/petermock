@@ -3,8 +3,8 @@
 <div qp-left-navbar id="left-navbar-wrapper"></div>
 
 <div id="content-wrapper" class="mdl-color--grey-300">
-    <div qp-top-navbar id="top-navebar-wrapper"></div>
-        <section>
+    <div qp-top-navbar id="top-navbar-wrapper"></div>
+        <section  class="content-con">
         <div class="content-grid mdl-grid profile">
 
             <div class="content-column mdl-cell mdl-cell--2-col">
@@ -14,9 +14,7 @@
 
                     <div class=" main-profile">
                         <div class="mdl-grid profile-header primary-color ">
-                            <div class="mdl-shadow--8dp profile-header-image">
-                                <img src="../imgs/face5.png" >
-                            </div>
+                            <img src="../imgs/face5.png" class=" mdl-shadow--8dp profile-header-image">
 
                             <div class="new-upload">
                                 <input type="file" onchange="profile.previewImg()">
@@ -28,7 +26,7 @@
                                 <div class="basics">
                                     <div class="p-header">
                                         <span class="header-title">Basics</span>
-                                        <span class="header-icon mdl-button mdl-js-button" ng-click="profile.editBasics()"><i class="material-icons">edit</i> </span>
+                                        <span class="header-icon mdl-button mdl-js-button " ng-click="profile.editBasics()"><i class="material-icons">edit</i> </span>
                                     </div>
                                     <form name="basic" id="basic-form" novalidate disabled>
                                         <div class="f-group">
@@ -90,8 +88,8 @@
                                             </select>
                                         </div>
                                         <div class="change-btn">
-                                            <input type="submit"  ng-click="profile.updateBasic()" name="updateBasic" class="mdl-button mdl-js-button primary-color" value="Save">
-                                            <button class="mdl-button mdl-js-button discard">discard</button>
+                                            <input type="submit"  ng-click="profile.updateBasic()" name="updateBasic" class="mdl-button mdl-js-button primary-color mz-dp-btn" value="Save" style="padding: 0 10px;margin-right: 10px;">
+                                            <button class="mdl-button mdl-js-button discard mz-dp-btn" style="padding: 0 10px;margin-right: 10px;">discard</button>
                                         </div>
                                     </form>
                                 </div>
@@ -99,7 +97,7 @@
                                 <div class="edu-status">
                                     <div class="p-header">
                                         <span class="header-title">Educational Status</span>
-                                        <span ng-click="profile.editEdu()" class="header-icon mdl-button mdl-js-button"><i class="material-icons">edit</i> </span>
+                                        <span ng-click="profile.editEdu()" class="header-icon mdl-button mdl-js-button "><i class="material-icons">edit</i> </span>
                                     </div>
                                     <form name="edu-form" ng-submit="profile.updateEdu()" id="edu-form">
                                         <div class="f-group">
@@ -138,8 +136,8 @@
 
                                         </div>
                                         <div class="change-btn">
-                                            <input type="submit" ng-click="profile.updateEdu()" class="mdl-button mdl-js-button primary-color" value="save">
-                                            <button class="mdl-button mdl-js-button discard">discard</button>
+                                            <input type="submit" ng-click="profile.updateEdu()" class="mdl-button mdl-js-button primary-color mz-dp-btn" style="padding: 0 10px;margin-right: 10px;" value="save">
+                                            <button class="mdl-button mdl-js-button discard mz-dp-btn" style="padding: 0 10px;margin-right: 10px;">discard</button>
                                         </div>
                                     </form>
                                 </div>
@@ -147,7 +145,7 @@
                                 <div class="fin-status">
                                     <div class="p-header">
                                         <span class="header-title">Financial Status</span>
-                                        <span ng-click="profile.editFin()" class="header-icon mdl-button mdl-js-button"><i class="material-icons">edit</i> </span>
+                                        <span ng-click="profile.editFin()" class="header-icon mdl-button mdl-js-button "><i class="material-icons">edit</i> </span>
                                     </div>
                                     <form id="fin-form">
                                         <div class="f-group">
@@ -163,36 +161,16 @@
                                         <div class="f-group">
                                             <label for="income">Income per month</label>
                                             <select id="income" ng-model="profile.fin.income" ng-value="profile.fin.income" disabled>
-                                                <option selected>below
-                                                    <span class="mz-h-cash">$&nbsp;100</span>
-                                                    </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;100</span> - <span class="mz-h-cash">$&nbsp;500</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;500</span> - <span class="mz-h-cash">$&nbsp;1,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;1,000</span> - <span class="mz-h-cash">$&nbsp;5,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;5,000</span> - <span class="mz-h-cash">$&nbsp;10,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;10,000</span> - <span class="mz-h-cash">$&nbsp;30,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;30,000</span> - <span class="mz-h-cash">$&nbsp;50,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;50,000</span> - <span class="mz-h-cash">$&nbsp;70,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;70,000</span> - <span class="mz-h-cash">$&nbsp;100,000</span>
-                                                </option>
-                                                <option>above 
-                                                    <span class="mz-h-cash">$&nbsp;100,000</span>
-                                                </option>
+                                                <option selected>below $100</option>
+                                                <option>$100 - $500</option>
+                                                <option>$500 - $1,000</option>
+                                                <option>$1,000 - $5,000</option>
+                                                <option>$5,000 - $10,000</option>
+                                                <option>$10,000 - $30,000</option>
+                                                <option>$30,000 - $50,000</option>
+                                                <option>$50,000 - $70,000</option>
+                                                <option>$70,000 - $100,000</option>
+                                                <option>above $100,000</option>
                                             </select>
 
 
@@ -200,37 +178,21 @@
                                         <div class="f-group">
                                             <label for="worth">Worth</label>
                                             <select id="worth" ng-model="profile.fin.worth" ng-value="profile.fin.worth" disabled>
-                                                <option selected>below 
-                                                    <span class="mz-h-cash">$&nbsp;1,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;1,000</span> - <span class="mz-h-cash">$&nbsp;10,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;10,000</span> - <span class="mz-h-cash">$&nbsp;100,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;100,000</span> - <span class="mz-h-cash">$&nbsp;500,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;500,000</span> - <span class="mz-h-cash">$&nbsp;1,000,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;1,000,000</span> - <span class="mz-h-cash">$&nbsp;1,000,000</span>
-                                                </option>
-                                                <option>
-                                                    <span class="mz-h-cash">$&nbsp;1,000,000</span> - <span class="mz-h-cash">$&nbsp;10,000,000</span>
-                                                </option>
-                                                <option>above 
-                                                    <span class="mz-h-cash">$&nbsp;10,000,000</span>
-                                                </option>
+                                                <option selected>below $1,000</option>
+                                                <option>$1,000 - $10,000</option>
+                                                <option>$10,000 - $100,000</option>
+                                                <option>$100,000 - $500,000</option>
+                                                <option>$500,000 - $1,000,000</option>
+                                                <option>$1,000,000 - $1,000,000</option>
+                                                <option>$1,000,000 - $10,000,000</option>
+                                                <option>above $10,000,000</option>
 
                                             </select>
 
                                         </div>
                                         <div class="change-btn">
-                                            <button type="submit" class="mdl-button mdl-js-button primary-color">Save</button>
-                                            <button class="mdl-button mdl-js-button discard">discard</button>
+                                            <button type="submit" class="mdl-button mdl-js-button primary-color mz-dp-btn" style="padding: 0 10px;margin-right: 10px;">Save</button>
+                                            <button class="mdl-button mdl-js-button discard mz-dp-btn" style="padding: 0 10px;margin-right: 10px;">discard</button>
                                         </div>
                                     </form>
                                 </div>
@@ -260,7 +222,7 @@
                                         <span class="is-verify"><i class="material-icons" style="vertical-align: middle">verified_user</i><i>verified</i></span>
                                         <div class="id-details">
                                             <span class="id-type">National Identity</span>
-                                            <img src="../../imgs/Flower.jpg">
+                                            <img src="../imgs/Flower.jpg">
                                             <span>Expires <i class="id-expires">11/2017</i></span>
                                         </div>
                                         <form class="id-form">
@@ -305,7 +267,7 @@
                                                 <input type="file" ng-click="profile.selectFile()" required>
                                             </div>
 
-                                                <button type="submit" class="mdl-button mdl-button--raised primary-color" style="width: 100%; color: #666; margin-top: 8px">update</button>
+                                                <button type="submit" class="mdl-button mdl-button--raised primary-color mz-dp-btn" style="width: 100%; padding: 0;">update</button>
 
                                         </form>
                                     </div>
@@ -322,4 +284,6 @@
             </div>
         </div>
     </section>
+    <!-- drawer container -->
+    <div class="drawer-wrapper"></div>
 </div>

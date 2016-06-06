@@ -141,6 +141,7 @@ body{
     display: block;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
+  top: 0;
 }
 .content-con{
     margin-top: 3em;
@@ -162,7 +163,7 @@ body{
 .content-grid .content-column{
   padding-bottom: 0;
   margin-bottom: 0;
-  height: 636px;
+  /*height: 636px;*/
   display: block;
   position: relative;
 
