@@ -1,0 +1,48 @@
+<ion-view view-title="Game Entry">
+  <ion-content padding="true" class="has-header">
+    <form class="list card" >
+      <div class="">
+        Join over 10000 people that will be earning today!
+      </div>
+
+      <!--<div class="entry-msg">
+        <p>You are about to submit new entry for today's game!<br><span> Click poceed to continue</span> </p>
+        <button class="mdl-button mdl-button&#45;&#45;raised mdl-button&#45;&#45;colored proceed-entry" ng-click="entry.proceedEntry()">Proceed</button>
+        <button class="mdl-button mdl-js-button cancel-entry" ng-click="entry.cancelEntry()">Cancel</button>
+      </div>-->
+
+        <label class="item item-input item-select">
+          <span class="input-label">Game Type</span>
+          <select ng-model="entry.type" ng-init="entry.type = gameTypes[0]" name="type" class="game-type">
+            <option ng-repeat="cType in gameTypes" ng-value="cType">{{cType}}</option>
+          </select>
+        </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Currency</div>
+        <!--<select ng-model="entry.type" ng-init="entry.type = entry.gameTypes[0]" name="type" class="game-type">
+          <option ng-repeat="cType in entry.gameTypes" ng-value="cType">{{cType}}</option>
+        </select>-->
+        <select>
+          <option>USD</option>
+          <option>NGN</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">Amount</div>
+        <!--<select ng-model="entry.type" ng-init="entry.type = entry.gameTypes[0]" name="type" class="game-type">
+          <option ng-repeat="cType in entry.gameTypes" ng-value="cType">{{cType}}</option>
+        </select>-->
+        <select disabled>
+          <option selected>$1.00</option>
+        </select>
+      </label>
+
+      <div class="item item-divider">
+
+        <input type="submit" class="button button-block button-calm" value="Enter Game">
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>
