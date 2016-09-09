@@ -60,76 +60,76 @@
 	<body ng-app="app" animation="slide-left-right-ios7">
 	<div>
 		<ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
-				<ion-side-menu-content>
-						<ion-nav-bar class="primary-background has-tabs-top">
-								<ion-nav-back-button></ion-nav-back-button>
-								<ion-nav-buttons side="left">
-										<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
-								</ion-nav-buttons>
-								<ion-nav-buttons side="right">
-										<button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right"></button>
-								</ion-nav-buttons>
-						</ion-nav-bar>
-						<ion-nav-view></ion-nav-view>
-				</ion-side-menu-content>
-				<ion-side-menu side="left" id="app-menu">
+			<ion-side-menu-content>
+				<ion-nav-bar class="primary-background has-tabs-top">
+						<ion-nav-back-button></ion-nav-back-button>
+						<ion-nav-buttons side="left">
+								<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+						</ion-nav-buttons>
+						<ion-nav-buttons side="right">
+								<button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right"></button>
+						</ion-nav-buttons>
+				</ion-nav-bar>
+				<ion-nav-view></ion-nav-view>
+			</ion-side-menu-content>
+			<ion-side-menu side="left" id="app-menu">
 						<!--<ion-header-bar class="bar-light" style="background-color: rgb(70, 182, 172);">
 								<div class="title" style=" color: #ededed">
-                  <i class="icon ion-briefcase"></i>
-                  <i class="icon ion-social-usd menu-right">80.00</i>
+	              <i class="icon ion-briefcase"></i>
+	              <i class="icon ion-social-usd menu-right">80.00</i>
 
-                </div>
+	            </div>
 						</ion-header-bar>-->
-						<ion-content padding="false" class="side-menu-left has-footer">
-              <div style="margin: 0px; line-height: 120px; text-align: center; background-color: rgb(70, 182, 172);">
-                <div class="title" style=" color: #ededed">
-                  <i class="icon ion-briefcase"></i>
-                  <i class="icon ion-social-usd menu-right">80.00</i>
+				<ion-content padding="false" class="side-menu-left has-footer">
+		            <div style="margin: 0px; line-height: 120px; text-align: center; background-color: rgb(70, 182, 172);">
+		                <div class="title" style=" color: #ededed">
+		                  <!-- <i class="icon ion-briefcase"></i> -->
+		                  <i class="icon ion-social-usd menu-right" style="font-size: 35px; color: #fff;">80.00</i>
 
-                </div>
-              </div>
-								<ion-list id="app-menu-list" data-componentid="list2">
-										<ion-item class="item-icon-left" ui-sref="home.updates">
-											<i class="icon ion-home"></i>
-											Home
-										</ion-item>
-									<ion-item class="item-icon-left" ui-sref="entry">
-										<i class="icon ion-flag"></i>
-										Enter Game
-									</ion-item>
-									<ion-item class="item-icon-left" ui-sref="game">
-										<i class="icon ion-ios-game-controller-b"></i>
-										Game Board
-									</ion-item>
-									<ion-item class="item-icon-left" ui-sref="fq">
-										<i class="icon ion-briefcase"></i>
-										Final Quest
-									</ion-item>
-									<ion-item class="item-icon-left" ui-sref="live">
-										<i class="icon ion-ios-videocam"></i>
-										Live Games
-									</ion-item>
-									<ion-item class="item-icon-left" ui-sref="testimony">
-										<i class="icon ion-thumbsup"></i>
-										Testimony
-									</ion-item>
-									<ion-item class="item-icon-left" ui-sref="leaderBoard">
-										<i class="icon ion-arrow-graph-up-right"></i>
-										Leader Board
-									</ion-item>
-									<ion-item class="item-icon-left" ui-sref="demo">
-										<i class="icon ion-android-subway"></i>
-										Demo Game
-									</ion-item>
-								</ion-list>
-						</ion-content>
-          <ion-footer-bar class="badge-calm">
-            <div class="title" style=" color: rgb(70, 182, 172); font-weight: 400" ui-sref="about">
-              <i class="icon ion-help-circled"></i>
-              About and help
-            </div>
-          </ion-footer-bar>
-				</ion-side-menu>
+		                </div>
+		            </div>
+					<ion-list id="app-menu-list" data-componentid="list2">
+							<ion-item menu-close class="item-icon-left is-active" ui-sref="home.updates">
+								<i class="icon ion-home"></i>
+								Home
+							</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="entry">
+							<i class="icon ion-flag"></i>
+							Enter Game
+						</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="game">
+							<i class="icon ion-ios-game-controller-b"></i>
+							Game Board
+						</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="fq">
+							<i class="icon ion-briefcase"></i>
+							Final Quest
+						</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="live">
+							<i class="icon ion-ios-videocam"></i>
+							Live Games
+						</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="testimony">
+							<i class="icon ion-thumbsup"></i>
+							Testimony
+						</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="leaderBoard">
+							<i class="icon ion-arrow-graph-up-right"></i>
+							Leader Board
+						</ion-item>
+						<ion-item menu-close class="item-icon-left" ui-sref="demo">
+							<i class="icon ion-android-subway"></i>
+							Demo Game
+						</ion-item>
+					</ion-list>
+				</ion-content>
+		        <ion-footer-bar class="badge-calm">
+		            <div menu-close class="title" style=" color: rgb(70, 182, 172); font-weight: 400" ui-sref="about">
+		              <i class="icon ion-help-circled"></i>
+		              About and help
+		            </div>
+		        </ion-footer-bar>
+			</ion-side-menu>
 			<ion-side-menu side="right" id="user-menu">
 				<ion-header-bar class="bar-light">
 					<div class="title">MillionaireZest</div>
@@ -140,45 +140,47 @@
 						&lt;!&ndash;<i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>&ndash;&gt;
 					</div>-->
 					<ion-list id="user-menu-list" data-componentid="list2">
-            <ion-item class="item-avatar-left">
-              <img src="img/face3.png">
-              <h2>Venkman</h2>
-              <p>hardeye@gmail.com</p>
-            </ion-item>
-            <ion-item class="user-alert">
-              <div class="alert-item">
-                <span>
-                  <i class="icon ion-android-notifications"></i>
-                  <i class="mz-badge">20</i>
-                </span>
+			            <ion-item menu-close class="item-avatar-left" ui-sref="displayProfile">
+			              <img src="img/face3.png">
+			              <h2>Venkman</h2>
+			              <p>hardeye@gmail.com</p>
+			            </ion-item>
+			            <ion-item class="user-alert">
+			              <div class="alert-item">
+			                <span >
+			                  <i class="icon ion-android-notifications"></i>
+			                  <i class="mz-badge">20</i>
+			                </span>
 
-              </div>
-              <div class="alert-item">
-                <span>
-                  <i class="icon ion-android-textsms"></i>
-                  <i class="mz-badge">10</i>
-                </span>
+			              </div>
+			              <div class="alert-item">
+			                <span>
+			                  <i class="icon ion-android-textsms"></i>
+			                  <i class="mz-badge">10</i>
+			                </span>
 
-              </div>
-            </ion-item>
-						<ion-item>
-              My Account
-            </ion-item>
-            <ion-item>
-              Game History
-            </ion-item>
-            <ion-item class="item-icon-right">
-              <i class="icon ion-gear-a"></i>
-              Settings
-            </ion-item>
-            <ion-item>
-              Log Out
-            </ion-item>
+			              </div>
+			            </ion-item>
+						<ion-item menu-close ui-sref="account" class="item-icon-left">
+							<i class="icon ion-android-folder"></i>
+			            	My Account
+			            </ion-item>
+			            <ion-item menu-close class="item-icon-left">
+			            	<i class="icon ion-android-calendar"></i>
+			            	Game History
+			            </ion-item>
+			            <ion-item menu-close class="item-icon-left">
+			            	<i class="icon ion-gear-a"></i>
+			             	Settings
+			            </ion-item>
+			            <ion-item class="item-icon-left">
+			             	Log Out
+			            </ion-item>
 
 					</ion-list>
 				</ion-content>
 			</ion-side-menu>
 		</ion-side-menus>
-</div>
+	</div>
 	</body>
 </html>

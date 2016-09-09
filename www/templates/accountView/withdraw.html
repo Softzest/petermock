@@ -1,0 +1,30 @@
+<ion-view title="Withdraw" id="withdraw">
+    <ion-content padding="true" class="has-header last-list" ng-controller="withdrawCtrl">
+        <div class="list modified-margin-list">
+            <label class="item item-input" id="cameraTabDefaultPage-input1">
+                <span class="input-label" style="width:initial;">$</span>
+                <input type="text" placeholder="200">
+                <span style="padding: 10px;">Less Than $ 200.00</span>
+            </label>
+        </div>
+        <div>
+            <ion-radio ng-model="payment" ng-value="paypal">
+                <h2>Paypal</h2>
+            </ion-radio>
+            <ion-radio ng-model="payment" ng-value="creditCard">
+                <h2>Debit/Credit Card</h2>
+            </ion-radio>
+            <ion-radio ng-model="payment" ng-value="westernUnion">
+                <h2>Western Union</h2>
+            </ion-radio>
+        </div><!-- 
+
+        <div class="list list-inset">
+            <label class="item item-input" id="cameraTabDefaultPage-input1">
+                <span class="input-label" style="width:initial;">Total: $ 0.00</span>
+            </label>
+        </div> -->
+        <button id="cameraTabDefaultPage-button5" class="button button-modified  button-block" ng-click="validateSubmit()">Proceed</button>
+
+    </ion-content>
+</ion-view>

@@ -39,7 +39,7 @@ angular.module('app.routes', [])
     views: {
       'tab3': {
         templateUrl: 'templates/tweets.html',
-        controller: 'cloudTabDefaultPageCtrl'
+        // controller: 'cloudTabDefaultPageCtrl'
       }
     }
   })
@@ -77,10 +77,46 @@ angular.module('app.routes', [])
       url: '/about',
       templateUrl: 'templates/about.html'
     })
+    .state('account', {
+      url: '/account',
+      templateUrl: 'templates/account.html'
+    })
+    .state('status', {
+      url: '/status',
+      templateUrl: 'templates/accountView/status.html'
+    })
+    .state('history', {
+      url: '/history',
+      templateUrl: 'templates/accountView/history.html'
+    })
+    .state('deposit', {
+      url: '/deposit',
+      templateUrl: 'templates/accountView/deposit.html'
+    })
+    .state('withdraw', {
+      url: '/withdraw',
+      templateUrl: 'templates/accountView/withdraw.html'
+    })
+    .state('confirm', {
+      url: '/cofirm',
+      templateUrl: 'templates/accountView/confirm.html'
+    })
+    .state('accountForm', {
+      url: '/accountForm/:accountType',
+      templateUrl: 'templates/accountView/addAccountForm.html'
+    })
+    .state('displayProfile', {
+      url: '/displayProfile',
+      templateUrl: 'templates/profileView/displayProfile.html'
+    })
+    .state('editProfile', {
+      url: '/editProfile',
+      templateUrl: 'templates/profileView/editProfile.html'
+    });
 
 
 
-$urlRouterProvider.otherwise('/home/updates')
+$urlRouterProvider.otherwise('/home/updates');
 
 
 

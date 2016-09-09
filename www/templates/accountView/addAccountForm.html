@@ -1,0 +1,20 @@
+<ion-view title="Withdraw" id="withdraw">
+    <ion-content padding="true" class="has-header last-list" ng-controller="addAccountCtrl">
+        <div ng-hide="addPaypalForm">
+            <h2>Email Address Paypal</h2>
+            <input type="text">
+        </div>
+        <div ng-hide="addCreditCardForm">
+            <h2>Email Address cc</h2>
+            <input type="text">
+        </div><!-- 
+
+        <div class="list list-inset">
+            <label class="item item-input" id="cameraTabDefaultPage-input1">
+                <span class="input-label" style="width:initial;">Total: $ 0.00</span>
+            </label>
+        </div> -->
+        <button id="cameraTabDefaultPage-button5" class="button button-modified  button-block" ng-click="validateSubmit()">Proceed</button>
+
+    </ion-content>
+</ion-view>

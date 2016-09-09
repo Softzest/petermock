@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 
-.primary-background{
+.primary-background{ 
   border-color: #46B6AC;
   background-color: #46B6AC;
   background-image: linear-gradient(0deg, #46B6AC, #46B6AC 50%, transparent 50%);
@@ -53,4 +53,154 @@
 }
 .bar .button.button-clear, .bar button.button-clear{
   color: #fff;
+}
+
+.modified-card .item {
+  text-align: center !important;
+}
+
+.modified-list .item {
+  padding: 10px !important;
+}
+
+.modified-list .list:last-child {
+    margin-bottom: 10px;
+}
+
+.history-button button {
+  margin: 0 !important;
+}
+
+.button-modified,
+.history-button button {
+  border-radius: 0 !important;
+  background: initial !important;
+  color: #46b6ac !important;
+  border: 1px solid !important;
+}
+
+.button-modified:active,
+.history-button button:active {
+  color: #fff !important;
+  background: #46b6ac !important;
+}
+
+.modified-inset .list-inset {
+  margin: 10px 5px;
+  text-align: center;
+}
+
+.button-border {
+  border: 1px solid #ccc;
+}
+
+.modified-margin-list {
+  margin-bottom: 10px !important;
+}
+
+/*.item {
+  border: 1px solid #46b6ac !important;
+}*/
+
+/*used in profile*/
+.item-data {
+  float: right;
+  font-size: 12px;
+}
+.item-center {
+  margin: auto;
+  text-align: center;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile img {
+  width: 100%;
+}
+
+.profile-pic {
+  width: 150px;
+  position: relative;
+  height: 150px;
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.edit-profile input,
+.edit-profile select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.edit-profile .item {
+  border: none;
+}
+
+/*#profile .item {
+  border: none;
+}*/
+
+#user-menu-list .user-alert {
+    border-top: none;
+}
+
+.brand-color,
+.is-active {
+  color: #46b6ac; 
+}
+
+.game-start .item,
+.game-start .list,
+.game-start .row {
+  padding: 0;
+}
+
+.game-start .col {
+  padding: 25px;
+}
+
+.game-start .col:first-of-type {
+  color: #46b6ac;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.game-start .col:nth-of-type(2) {
+    background: #096a62;
+    color: #fff;
+    font-size: 35px;
+}
+
+.displaay-profile-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  height: 250px;
+}
+
+.left-text {
+  float: right;
+}
+
+#update .item-image {
+  text-align: left;
+}
+
+#update .item-image h2,
+#update .item-image p {
+  padding: 0 10px;
+}
+
+#update .item-image p {
+  padding-bottom: 10px;
 }

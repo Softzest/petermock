@@ -1,0 +1,36 @@
+<ion-view title="Account" id="account" ng-controller="accountCtrl">
+<!--   <ion-nav-buttons side="left">
+      <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+        <i class="icon ion-ios-arrow-back">Back</i>
+      </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+      <button class="button button-clear" ></button>
+  </ion-nav-buttons> -->
+    <ion-content padding="false" class="has-header">
+      <ion-list id="account-detail" data-componentid="list2">
+        <ion-item ui-sref="status">
+          Status
+        </ion-item>
+        <ion-item ui-sref="history">
+          History
+        </ion-item>
+        <ion-item ui-sref="deposit">
+          Deposit
+        </ion-item>
+        <ion-item  ui-sref="withdraw">
+          <!-- <i class="icon ion-gear-a"></i> -->
+          Withdraw
+        </ion-item>
+        <ion-item>
+          Cards
+        </ion-item>
+        <ion-item>
+          Paypal
+        </ion-item>
+        <ion-item>
+          Bank
+        </ion-item>
+      </ion-list>
+    </ion-content>
+</ion-view>

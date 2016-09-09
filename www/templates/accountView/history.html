@@ -1,0 +1,165 @@
+<ion-view title="Histroy" id="history">
+    <ion-content padding="false" class="has-header modified-list" ng-controller="historyCtrl">
+    <div id="cameraTabDefaultPage-button-bar2 " class="button-bar history-button">
+        <button id="cameraTabDefaultPage-button5" class="button button-block" ng-click="viewDeposit()">Deposit</button>
+        <button id="cameraTabDefaultPage-button6" class="button button-block" ng-click="viewEarned()">Earned</button>
+        <button id="cameraTabDefaultPage-button7" class="button button-block" ng-click="viewWithdraw()">Withdraw</button>
+    </div>
+      <div class="list" ng-hide="depositHistory">
+        <div class="item item-text-wrap">
+          <h2>Final Deposit | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via Pay Pal @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via Pay Pal @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+      </div>
+      <div class="list" ng-hide="earnedHistory">
+        <div class="item item-text-wrap">
+          <h2>Final Earned | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via Pay Pal @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via Pay Pal @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+      </div>
+      <div class="list" ng-hide="withdrawHistory">
+        <div class="item item-text-wrap">
+          <h2>Final Withdraw | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via Pay Pal @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Final Quest | Phase 3 @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via Pay Pal @21/02/2015</h2>
+          <p>$ 20,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div><div class="item item-text-wrap">
+          <h2>Via pay pal @21/02/2015</h2>
+          <p>$ 10,000</p>
+        </div>
+      </div>
+    </ion-content>
+</ion-view>

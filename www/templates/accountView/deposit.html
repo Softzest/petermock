@@ -1,0 +1,62 @@
+<ion-view title="Deposit" id="deposit">
+    <ion-content padding="true" class="has-header" ng-controller="depositCtrl"> 
+      <div ng-hide='depositType'>         
+        <ion-radio ng-model="payment" ng-value="'paypal'">
+          <h2>Paypal</h2>
+          <p>Minimum Deposit $5.00</p>
+        </ion-radio>
+        <ion-radio ng-model="payment" ng-value="'creditCard'">
+          <h2>Debit/Credit Card</h2>
+          <p>Minimum Deposit $10.00</p>
+        </ion-radio>
+        <button id="cameraTabDefaultPage-button5" class="button button-modified  button-block" ng-click="paymentSubmit()">Proceed</button>
+      </div>
+
+      <div ng-hide="paypalAccount">
+        <div class="list">
+          <div class="item item-divider"><h2>Amount</h2></div>
+          
+          <label class="item item-input" id="cameraTabDefaultPage-input1">
+              <span class="input-label" style="width:initial;">$</span>
+              <input type="text" placeholder="200">
+          </label>
+        </div>
+        <div class="list">
+          <div class="item item-divider"><h2>Select account</h2></div>
+            <ion-radio ng-model="selectAcc" ng-value="accountName">
+                <h2>peterolayinka97@gmail.com</h2>
+            </ion-radio>
+            <ion-radio ng-model="selectAcc" ng-value="accountName">
+                <h2>hardeyemi@gmai.com</h2><!-- add new shows a popup -->
+            </ion-radio>
+            <button id="cameraTabDefaultPage-button5" class="button button-block button-border" ng-click="addNewAccount('paypal')">Add account</button><!-- add new shows a popup -->
+        </div>
+        <button id="cameraTabDefaultPage-button5" class="button button-modified  button-block" ng-click="validateSubmit()">Proceed</button>
+      </div>
+
+      <div ng-hide="creditCardAccount">
+        <div class="list">
+          <div class="item item-divider"><h2>Amount</h2></div>
+          
+          <label class="item item-input" id="cameraTabDefaultPage-input1">
+              <span class="input-label" style="width:initial;">$</span>
+              <input type="text" placeholder="200">
+          </label>
+        </div>
+        <div class="list">
+          <div class="item item-divider"><h2>Select card</h2></div>
+            <ion-radio ng-model="selectAcc" ng-value="cardnum1">
+                <h2>3658*************6732</h2>
+            </ion-radio>
+            <ion-radio ng-model="selectAcc" ng-value="cardnum2">
+                <h2>3458*************3243</h2>
+            </ion-radio>
+            <ion-radio ng-model="selectAcc" ng-value="cardnum3">
+                <h2>3458*************3243</h2><!-- add new shows a popup -->
+            </ion-radio>
+            <button id="cameraTabDefaultPage-button5" class="button button-block button-border" ng-click="addNewAccount('creditCard')">Add credit card</button><!-- add new shows a popup -->
+        </div>
+        <button id="cameraTabDefaultPage-button5" class="button button-modified  button-block" ng-click="validateSubmit()">Proceed</button>
+      </div>
+    </ion-content>
+</ion-view>
